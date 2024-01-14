@@ -8,3 +8,5 @@ cv_pdf: example_pdf.pdf
 toc:
   sidebar: left
 ---
+
+hi there
