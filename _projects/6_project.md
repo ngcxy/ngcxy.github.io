@@ -1,80 +1,94 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: 'Trojan Map'
+description: a C++ Map Application
+img: assets/img/6/short.png
+importance: 45
+category:
+giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project focuses on using data structures in C++ and implementing various graph algorithms to build a map application.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Code Link on [GitHub](https://github.com/ngcxy/TrojanMap)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Video Presentation on [YouTube](https://www.youtube.com/watch?v=dTmSdIphrBw)
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Find details about this course project in [README](https://github.com/ngcxy/TrojanMap/blob/main/README.md) and [REPORT](https://github.com/ngcxy/TrojanMap/blob/main/REPORT.md) file
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Algorithm Highlights
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
 
-{% raw %}
+```c++
+int CalculateEditDistance(std::string name1, std::string name2)
+```
+- Dynamic Programming
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+---
+
+```c++
+std::vector<std::string> CalculateShortestPath_Dijkstra(std::string &location1_name, std::string &location2_name)
+std::vector<std::string> CalculateShortestPath_Bellman_Ford(std::string &location1_name, std::string &location2_name)
+```
+- Dijkstra & Bellman Ford
+
+Example
+
+```shell
+**************************************************************
+* 6. CalculateShortestPath                                    
+**************************************************************
+
+Please input the start location:Ralphs
+Please input the destination:Target
+*************************Dijkstra*****************************
+*************************Results******************************
+"2578244375","4380040154","4380040158","4380040167","6805802087","8410938469","6813416131","7645318201","6813416130","6813416129","123318563","452688940","6816193777","123408705","6816193774","452688933","452688931","123230412","6816193770","6787470576","4015442011","6816193692","6816193693","6816193694","4015377691","544693739","6816193696","6804883323","6807937309","6807937306","6816193698","4015377690","4015377689","122814447","6813416159","6813405266","4015372488","4015372487","6813405229","122719216","6813405232","4015372486","7071032399","4015372485","6813379479","6813379584","6814769289","5237417650",
+The distance of the path is:0.927969 miles
+**************************************************************
+Time taken by function: 39 ms
+
+*************************Bellman_Ford*************************
+*************************Results******************************
+"2578244375","4380040154","4380040158","4380040167","6805802087","8410938469","6813416131","7645318201","6813416130","6813416129","123318563","452688940","6816193777","123408705","6816193774","452688933","452688931","123230412","6816193770","6787470576","4015442011","6816193692","6816193693","6816193694","4015377691","544693739","6816193696","6804883323","6807937309","6807937306","6816193698","4015377690","4015377689","122814447","6813416159","6813405266","4015372488","4015372487","6813405229","122719216","6813405232","4015372486","7071032399","4015372485","6813379479","6813379584","6814769289","5237417650",
+The distance of the path is:0.927969 miles
+**************************************************************
+Time taken by function: 7084 ms
 ```
 
-{% endraw %}
+---
+
+```c++
+bool CycleDetection(std::vector<double> &square)
+```
+- DFS to detect cycle
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/6/cycle.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+---
+
+Traveling Salesman
+
+```c++
+std::pair<double, std::vector<std::vector<std::string>>> TravelingTrojan_Brute_force(std::vector<std::string> location_ids)
+```
+
+```c++
+std::pair<double, std::vector<std::vector<std::string>>> TravelingTrojan_Backtracking(std::vector<std::string> location_ids)
+```
+
+```c++
+std::pair<double, std::vector<std::vector<std::string>>> TravelingTrojan_2opt(std::vector<std::string> location_ids)
+```
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/6/output.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>

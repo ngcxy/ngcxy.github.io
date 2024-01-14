@@ -1,81 +1,54 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
-importance: 1
-category: work
-related_publications: true
+title: Cloud Course Registration System
+description: a C++ socket project deployed on AWS
+img: assets/img/1/1-network.png
+importance: 50
+category:
+giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+[code link](https://github.com/ngcxy/Network-Socket-Programming)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Web registration system is the crucial place for students to plan their future courses. 
+When registration for a new semester begins, hundreds of students will flood into the registration website. 
+In such a situation, a stable and efficient system is indispensable.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In this project, I built a course registration backend using sockets, which provides fast and reliable connections between hundreds of clients and our servers. 
+It includes five communication end-points:
+
+- Client: used by a student to access the registration system
+- Main server (serverM): coordinate with the backend servers
+- Credential server (serverC): verify the identity of the student
+- Department servers (serverCS and serverEE): store the information of courses offered by this department
+
+Input data:
+
+- Credential server: cred.txt for encrypted usernames and passwords
+- Department servers: ee.txt and cs.txt for course information
+
+I implemented both TCP and UDP sockets for connection, with a TCP socket for client-serverM communication, and UDP sockets for all backend servers' communication.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/1/1-network.png" title="network illustration" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+The code is written in C++ and built in the linux environment, you can access it [here](https://github.com/ngcxy/Network-Socket-Programming).
+After learning cloud computing with AWS, I deployed it onto AWS EC2 instances.
+I assigned a VPC for all the backend servers to ensure an isolated working space, and then associated an elastic IP for the public interface of the main server.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/1/1-vpc.png" title="network illustration" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+After all the implementations are completed, clients can now access from outside to this system to login, and acquire information about the course they want to register.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Here's a demo for the application.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<iframe width="780" height="400" src="../../../assets/img/1/1-demo.MP4" frameborder="0" allowfullscreen></iframe>
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Backup for the demo is on [YouTube](https://youtu.be/E1aWdYwHuns)
