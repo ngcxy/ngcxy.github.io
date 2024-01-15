@@ -11,7 +11,7 @@ GraphQL has become a popular choice for building APIs due to its flexibility and
 In this post, we'll explore a GraphQL server implemented using Express, backed by a MongoDB database.
 Specifically, we'll create a robust API to manage players and matches for a hypothetical gaming platform.
 
-Check this code link: [https://github.com/ngcxy/GraphQL-HTTP-Express]
+Check this code link: [https://github.com/ngcxy/GraphQL-HTTP-Express](https://github.com/ngcxy/GraphQL-HTTP-Express)
 
 (Source: adapted from several assignments of source [USC EE547](https://web-app.usc.edu/soc/syllabus/20221/31250.pdf))
 
@@ -253,7 +253,7 @@ app.get("/ping", (req, res) => {
 app.listen(PORT);
 ```
 
-After you start the server, you can find your API running on http://localhost:3000/graphql, and playground available on http://localhost:3000/playground
+After you start the server, you can find your API running on [http://localhost:3000/graphql](http://localhost:3000/graphql), and playground available on [http://localhost:3000/playground](http://localhost:3000/playground)
 
 
 
