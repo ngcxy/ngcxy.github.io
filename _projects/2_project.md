@@ -8,7 +8,7 @@ category:
 giscus_comments: true
 ---
 
-Visit the [Website](my-blog-app-silk.vercel.app)
+Visit the [Website](https://my-blog-app-silk.vercel.app/)
 
 Code Link on [GitHub](https://github.com/ngcxy/Blog-app)
 
