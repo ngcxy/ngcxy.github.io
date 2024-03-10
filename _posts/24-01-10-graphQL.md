@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Building a GraphQL HTTP server with Express and MongoDB
-date:   2023-12-05 16:40:16
+date:   2024-01-10 16:40:16
 description: 
 tags: GraphQL Express HTTP
 categories: 
