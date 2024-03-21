@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ML Accelerator DataFlow: Output Stationary in 3 approaches
+title:  "ML Accelerator DataFlow: Output Stationary in 3 approaches"
 date: 2024-03-18 00:00:00
 description:
 tags: Python Hardware-accelerator Data-flow Multi-thread
