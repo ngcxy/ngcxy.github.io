@@ -1,0 +1,21 @@
+bundle exec jekyll serve
+
+about: _pages/about.md
+project: _projects/
+    project category: _pages/projects.md
+    category on/off: _config.yml "enable_project_categories"
+    image on the card: _includes/project_horizontal.html code:{% include figure.html path=project.img alt="project thumbnail" height="200px"%}
+    capitalize words in title: _includes/projects.html
+
+cv: _data/cv.yml
+
+visitor map: _layouts/about.html
+
+tags for blog: _config.yml, "display_tags"
+kramdown-parser-gfm ERROR: added gem "kramdown-parser-gfm" to the Gemfile and then ran bundle install
+delete post "Displaying External Posts on Your al-folio Blog": _config.yml "external_sources:"
+imagemagick ERROR: brew install imagemagick
+
+todo:
+cards for projects: 0 margin for img
+project/network-socket: code structure of all the sockets

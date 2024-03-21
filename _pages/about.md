@@ -20,6 +20,8 @@ at [University of Southern California](https://www.usc.edu).
 I earned my Bachelor's degree from [Fudan University](https://www.fudan.edu.cn/en/), graduating with high honors (Summa Cum Laude) and receiving the Chinese National Scholarship.
 Now I'm on the lookout for exciting opportunities in the field of software engineering.
 
+(P.S. In case you're using browsers on the phone, my projects page is accessible by the button on top-right ⬆️ Thanks for visiting!)
+
 [//]: # (I'm deeply passionate about Cloud Computing, covering software, network, and hardware.)
 
 [//]: # (Moreover, I've accumulated valuable experience in web development.)
