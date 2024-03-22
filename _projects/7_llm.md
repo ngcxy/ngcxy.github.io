@@ -55,11 +55,11 @@ Additionally, working on the algorithms by ourselves really helps me to signific
 
 The processing includes these crucial procedure: Preprocessing, Word2Vec, Kmeans Clustering, and Histogram Construction.
 
-
+(plan to finish on 3.22)
 
 ### Piazza API
 
-...
+(plan to finish on 3.22)
 
 ### Frontend
 
@@ -71,7 +71,7 @@ The frontend is a chat interface that serves mostly as a test tool. It is built 
     </div>
 </div>
 
-> My part in this project: Piazza API(completed) & Custom Embedding(On going)
+> My part in this project: Piazza API(completed) & Custom Embedding(Ongoing)
 
 
 
