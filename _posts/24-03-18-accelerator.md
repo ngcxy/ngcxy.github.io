@@ -25,18 +25,6 @@ In output stationary architecture, the output data remains stationary in the Pro
 In this post, I'll use Python to implement three approaches of 1D output stationary dataflow - one from the textbook, and other two came up by myself.
 I simulate PEs using the `Process` class from the `multiprocessing` library. Dataflows are managed via `Queue`, and outputs are stored in `Array`.
 
-### A short summary first
-
-All three approaches pass the validation, the other two dataflows achieve a slightly **faster runtime** than the first one.
-There is also an advantage of the other two that they **don't need extra buffer** to store the values.
-(The input feature map size is 64; the weight size is 4)
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/post/3/res.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
 ---
 
 ### Output Stationary 1 - textbook example
@@ -83,3 +71,18 @@ Also, all PEs will not start retrieving the broadcast weight until a certain tim
 </div>
 
 This method also avoids the storing issue, and achieves the highest efficiency among all.
+
+### Simulation Result
+
+We tested these approaches using an input feature map of size 64, and the weight of size 4. The floating numbers are randomly generated.
+We then compared the simulation results with the expected ones.
+
+All three approaches passed the validation, the other two dataflows achieved a slightly **faster runtime** than the first one.
+It is also an advantage of the other two that they **don't need extra buffer** to store the values.
+
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/post/3/res.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
