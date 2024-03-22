@@ -87,7 +87,25 @@ Currently, we're still tuning the model (stop words data, cluster size, addition
 
 ### Piazza API
 
-(plan to finish on 3.22)
+This custom API is built upon this [unofficial Piazza client](https://github.com/hfaran/piazza-api). 
+The principal modifications are: adding functions to get unread posts, supporting student_rule reply, changing authentication mechanism to support multiple session.
+
+These functions are then wrapped into endpoints on the Flask server:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7/pairing.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+With this server combined with our language model, we can achieve the functionality of immediate automatic reply. *Promising to replace TAs in the future!!*
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7/piazza.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+- Bot1 is generated from SBERT and bot2 from LlamaIndex.
 
 ### Frontend
 
