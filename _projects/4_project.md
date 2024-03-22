@@ -8,7 +8,8 @@ category:
 giscus_comments: true
 ---
 
-This is a Lab from Course *Internet and Cloud Computing* by Prof. Young Cho. 
+This is a Lab from Course USC EE-542: Internet and Cloud Computing. 
+
 Watch this demo video by one of my teammates on [Youtube](https://youtu.be/Z-tlv-LT8fo)
 
 ---
