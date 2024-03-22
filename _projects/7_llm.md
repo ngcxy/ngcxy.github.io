@@ -53,9 +53,37 @@ First, the text of our post database are highly domain specific - it mainly conc
 so a customized model might be more flexible and efficient. 
 Additionally, working on the algorithms by ourselves really helps me to significantly understand Natural Language Processing.
 
-The processing includes these crucial procedure: Preprocessing, Word2Vec, Kmeans Clustering, and Histogram Construction.
+The processing includes these crucial procedure: Preprocessing, Vectorizing, Kmeans Clustering, and Histogram Construction.
 
-(plan to finish on 3.22)
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7/embed.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+- Preprocessing
+  - **Tool: nltk, sklearn, spacy**
+  - For paragraphs in the raw data, chunk them into small pieces of sentences, and further tokenize them into arrays of words.
+  - Remove the stop words using static library and TF-IDF (Term Frequency-Inverse Document Frequency)
+- Vectorizing
+  - **Tool: gensim.models Word2Vec**
+  - Transform words into vectors based on their surrounding context.
+- Kmeans Clustering
+  - **Tool: sklearn.cluster KMeans**
+  - Group words together into k clusters based on the distance of their vector.
+- Histogram Construction
+  - Each sentence is rebuilt into an array of k, with the value in index *i* representing the frequency of words from cluster *i*.
+  - The array is normalized so that all the values add up to 1.
+
+Now, we are able to find sentences with the closest meanings based on their similarities of the histograms.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7/pairing.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Currently, we're still tuning the model (stop words data, cluster size, addition context...) in order to reach a higher accuracy.
 
 ### Piazza API
 
