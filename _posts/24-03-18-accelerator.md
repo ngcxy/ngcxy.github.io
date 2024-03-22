@@ -31,6 +31,11 @@ All three approaches pass the validation, the other two dataflows achieve a slig
 There is also an advantage of the other two that they **don't need extra buffer** to store the values.
 (The input feature map size is 64; the weight size is 4)
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/post/3/res.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ---
 
