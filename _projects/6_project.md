@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'Trojan Map'
-description: a C++ Map Application
+description: a C++ Map&Navigation Application
 img: assets/img/6/short.png
 importance: 45
 category:

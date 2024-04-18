@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'Smart TA'
-description: USC Graduate Directed Research
+description: an LLM project (USC Directed Research)
 img: assets/img/7/structure.png
 importance: 44
 category:
