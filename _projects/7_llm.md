@@ -10,6 +10,8 @@ giscus_comments: true
 
 Working repositories:
 
+Visiting the Website: [www.coursistant.com](https://www.coursistant.com/)
+
 Custom document embedding: [GitHub Link](https://github.com/ngcxy/Custom_Doc_Embedding)
 
 Other Embedding models:  [GitHub Link](https://github.com/marioUSC/academyChatBot)
@@ -18,7 +20,7 @@ Piazza API: [GutHib Link](https://github.com/ngcxy/Piazza_API)
 
 ---
 
-This is a ongoing USC directed research project supervised by Professor Young Cho at Viterbi School of Engineering. 
+This is an ongoing USC directed research project supervised by Professor Young Cho at Viterbi School of Engineering. 
 Our group of three is currently developing a smart TA application that can reply to students' answers immediately 
 based on a model trained by previous posts.
 
