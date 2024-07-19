@@ -8,54 +8,36 @@ category:
 giscus_comments: true
 ---
 
-Working repositories:
-
 Visiting the Website: [www.coursistant.com](https://www.coursistant.com/)
 
-Custom document embedding: [GitHub Link](https://github.com/ngcxy/Custom_Doc_Embedding)
+Embedding model: [GitHub Link](https://github.com/ngcxy/Custom_Doc_Embedding)
 
-Other Embedding models:  [GitHub Link](https://github.com/marioUSC/academyChatBot)
+Language model:  [GitHub Link](https://github.com/marioUSC/academyChatBot)
 
 Piazza API: [GutHib Link](https://github.com/ngcxy/Piazza_API)
 
 ---
 
-This is an ongoing USC directed research project supervised by Professor Young Cho at Viterbi School of Engineering. 
-Our group of three is currently developing a smart TA application that can reply to students' answers immediately 
+This is an ongoing research project supervised by Professor Young Cho at USC Information Sciences Institute. 
+Our group of four is currently developing a smart TA application that can reply to students' answers immediately 
 based on a model trained by previous posts.
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/7/structure.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+[//]: # (<div class="row mt-3">)
 
-### Language Model
+[//]: # (    <div class="col-sm mt-3 mt-md-0">)
 
-The training process of the model is basically **document embedding**. 
-We've already achieved high accuracy in two ways using pre-built techniques [**LlamaIndex**](https://www.llamaindex.ai/) and [**SBERT**](https://www.sbert.net/). 
-Now, we're exploring a custom way in which we design the algorithms to process context by ourselves, aiming to reach a much lower processing cost.
-The customized model will be introduced in the next section.
+[//]: # (        {% include figure.html path="assets/img/7/structure.png" class="img-fluid rounded z-depth-1" %})
 
-For the inference part, the input question will first get passed into the embedded model, 
-which will provide us with questions that are most similar to the new question in our database.
-After this, we can further retrieve the answers to these questions. 
-Finally, we feed all the information to OpenAI API to let it deal with expression issues such as grammar, and summarize the answer.
+[//]: # (    </div>)
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/7/nlp.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+[//]: # (</div>)
 
 ### Custom Embedding
 
-Although pre-built libraries work well in embedding, there are still points in building our own embedding model.
-First, the text of our post database are highly domain specific - it mainly concerns with course materials and concepts, 
-so a customized model might be more flexible and efficient. 
-Additionally, working on the algorithms by ourselves really helps me to significantly understand Natural Language Processing.
+Since the context of our post database are highly domain specific - it mainly concerns with course materials and concepts, 
+a customized embedding model might be more flexible and efficient compared to existing large embedding model like BERT and LlamaIndex.
 
-The processing includes these crucial procedure: Preprocessing, Vectorizing, Kmeans Clustering, and Histogram Construction.
+The processing includes the following crucial procedure: Preprocessing, Vectorizing, Kmeans Clustering, and Histogram Construction.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -85,7 +67,25 @@ Now, we are able to find sentences with the closest meanings based on their simi
     </div>
 </div>
 
-Currently, we're still tuning the model (stop words data, cluster size, addition context...) in order to reach a higher accuracy.
+Currently, we're still tuning the model (optimize stop words removal, cluster size, addition context...) in order to reach a higher accuracy.
+
+### Language Model
+
+The training process of the model is basically **document embedding**. 
+We've already achieved high accuracy in two ways using pre-built techniques [**LlamaIndex**](https://www.llamaindex.ai/) and [**SBERT**](https://www.sbert.net/). 
+Now, we're exploring a custom way in which we design the algorithms to process context by ourselves, aiming to reach a much lower processing cost.
+The customized model will be introduced in the next section.
+
+For the inference part, the input question will first get passed into the embedded model, 
+which will provide us with questions that are most similar to the new question in our database.
+After this, we can further retrieve the answers to these questions. 
+Finally, we feed all the information to OpenAI API to let it deal with expression issues such as grammar, and summarize the answer.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7/nlp.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ### Piazza API
 
