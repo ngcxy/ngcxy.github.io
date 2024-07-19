@@ -8,7 +8,11 @@ category:
 giscus_comments: true
 ---
 
-Visiting the Website: [www.coursistant.com](https://www.coursistant.com/)
+Visit our Website: [www.coursistant.com](https://www.coursistant.com/)
+
+Watch the demo: [YouTube Video](https://www.youtube.com/watch?v=PICrTdzx8ls)
+
+Repositories:
 
 Embedding model: [GitHub Link](https://github.com/ngcxy/Custom_Doc_Embedding)
 
@@ -20,17 +24,14 @@ Piazza API: [GutHib Link](https://github.com/ngcxy/Piazza_API)
 
 This is an ongoing research project supervised by Professor Young Cho at USC Information Sciences Institute. 
 Our group of four is currently developing a smart TA application that can reply to students' answers immediately 
-based on a model trained by previous posts.
+based on a model trained by previous posts. The model is based on RAG(Retrieval-Augmented Generation) architecture, 
+with custom document embeddings.
 
-[//]: # (<div class="row mt-3">)
-
-[//]: # (    <div class="col-sm mt-3 mt-md-0">)
-
-[//]: # (        {% include figure.html path="assets/img/7/structure.png" class="img-fluid rounded z-depth-1" %})
-
-[//]: # (    </div>)
-
-[//]: # (</div>)
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/7/structure.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ### Custom Embedding
 
@@ -71,21 +72,12 @@ Currently, we're still tuning the model (optimize stop words removal, cluster si
 
 ### Language Model
 
-The training process of the model is basically **document embedding**. 
-We've already achieved high accuracy in two ways using pre-built techniques [**LlamaIndex**](https://www.llamaindex.ai/) and [**SBERT**](https://www.sbert.net/). 
-Now, we're exploring a custom way in which we design the algorithms to process context by ourselves, aiming to reach a much lower processing cost.
-The customized model will be introduced in the next section.
-
-For the inference part, the input question will first get passed into the embedded model, 
-which will provide us with questions that are most similar to the new question in our database.
-After this, we can further retrieve the answers to these questions. 
-Finally, we feed all the information to OpenAI API to let it deal with expression issues such as grammar, and summarize the answer.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/7/nlp.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+With our custom embedding model connected to Pinecone as vector database and OpenAI API as LLM model, 
+we build the completed model for generating answers for the new questions.
+In the first step, TAs will feed course materials and archived posts to the embedding model, 
+which will then store all the information into our vector DB.
+Then, when the new query comes, it will be passed into our embedding model and do a similarity search to retrieve all relevant information.
+Finally, we feed both the information and the query, along with a prompt, to OpenAI API to let it deal with expression issues such as grammar, and summarize the answer.
 
 ### Piazza API
 
@@ -107,19 +99,9 @@ With this server combined with our language model, we can achieve the functional
         {% include figure.html path="assets/img/7/piazza.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-- Bot1 is generated from SBERT and bot2 from LlamaIndex.
 
-### Frontend
 
-The frontend is a chat interface that serves mostly as a test tool. It is built by Next.js and hosted on Vercel.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/7/frontend.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
-> My part in this project: Piazza API(completed) & Custom Embedding(Ongoing)
+> My part in this project: Piazza API(completed), Custom Embedding Model & Language Model(Ongoing)
 
 
 
