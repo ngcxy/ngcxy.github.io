@@ -36,12 +36,11 @@
       year: 2023.5-2023.8
       description:
         - React, Spring Boot, Socket.IO, AWS, MongoDB
-    - title: Mentor of Course-Introduction to Computer Networks
+    - title: Grader of Course-Introduction to Computer Networks
       institution: University of Southern California, Los Angeles
       year: 2023.1-
       description:
-        - Held office hour for 30 students concerning knowledge in computer networks
-        - Managed and replyed to students' online posts on Piazza
+        - Computer Networks, Socket Programming
 
 #- title: Open Source Projects
 #  type: time_table
